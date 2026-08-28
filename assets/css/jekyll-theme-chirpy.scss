@@ -20,11 +20,4 @@ body {
   background-position: center;
 }
 
-#main-wrapper {
-  background: rgba(255, 255, 255, 0.88);
-  backdrop-filter: blur(2px);
-}
 
-[data-theme="dark"] #main-wrapper {
-  background: rgba(0, 0, 0, 0.82);
-}
