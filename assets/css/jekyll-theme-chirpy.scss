@@ -14,5 +14,51 @@
 
 /* append your custom style below */
 
+// ========================================
+// 质感优化（无背景图）
+// ========================================
 
+// 1. 渐变背景
+body {
+  background: linear-gradient(145deg, #f6f8fc 0%, #e8ecf2 100%);
+  min-height: 100vh;
+}
+
+// 2. 主容器毛玻璃
+#main-wrapper {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  margin: 24px auto;
+  padding: 20px 30px;
+  box-shadow: 0 8px 60px rgba(0, 0, 0, 0.04);
+}
+
+// 3. 卡片质感
+.post-preview {
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transition: transform 0.2s, box-shadow 0.3s;
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
+  }
+}
+
+// 4. 深色模式
+[data-theme="dark"] {
+  body {
+    background: linear-gradient(145deg, #18181c 0%, #121214 100%);
+  }
+  #main-wrapper {
+    background: rgba(20, 20, 24, 0.75);
+    box-shadow: 0 8px 60px rgba(0, 0, 0, 0.3);
+  }
+  .post-preview {
+    border-color: rgba(255, 255, 255, 0.04);
+    &:hover {
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+    }
+  }
+}
 
